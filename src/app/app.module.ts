@@ -12,6 +12,7 @@ import zh from '@angular/common/locales/zh';
 import {NavTopComponent} from './share/nav-top/navTop.component';
 import {LoginComponent} from './login/login.component';
 import {IndexComponent} from './index/index.component';
+import {MyLogComponent} from './myLog/myLog.component';
 
 import {RouterModule} from '@angular/router';
 
@@ -24,7 +25,8 @@ registerLocaleData(zh);
     AppComponent,
     LoginComponent,
     NavTopComponent,
-    IndexComponent
+    IndexComponent,
+    MyLogComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,16 @@
-<h1>顶部菜单</h1>>
+<div class="navTop-nav">
+  <div class="container">
+    <div class="navTop-nav-left" nz-col [nzXs]="4" [nzSm]="4" [nzMd]="4">
+      <h1>个人博客</h1>
+    </div>
+    <div class="navTop-nav-right" nz-col [nzXs]="20" [nzSm]="20" [nzMd]="20">
+      <ul>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'message' === currentPageName }">留言</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'about' === currentPageName }">关于我</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'photo' === currentPageName }">我的相册</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'myLog' === currentPageName }" [routerLink]="['/myLog']">我的日志</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'index' === currentPageName }">网站首页</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
