@@ -25,7 +25,13 @@
           a:hover{
             color: #000;
           }
+          a:focus{
+            text-decoration: none;
+          }
           .seleted{
+            color: #f65a8a;
+          }
+          .seleted:hover{
             color: #f65a8a;
           }
         }

@@ -7,9 +7,9 @@
       <ul>
         <li><a href="javascript:;" [ngClass]="{ 'seleted': 'message' === currentPageName }">留言</a></li>
         <li><a href="javascript:;" [ngClass]="{ 'seleted': 'about' === currentPageName }">关于我</a></li>
-        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'photo' === currentPageName }">我的相册</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'myPhoto' === currentPageName }" [routerLink]="['/myPhoto']">我的相册</a></li>
         <li><a href="javascript:;" [ngClass]="{ 'seleted': 'myLog' === currentPageName }" [routerLink]="['/myLog']">我的日志</a></li>
-        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'index' === currentPageName }">网站首页</a></li>
+        <li><a href="javascript:;" [ngClass]="{ 'seleted': 'index' === currentPageName }" [routerLink]="['/index']">网站首页</a></li>
       </ul>
     </div>
   </div>

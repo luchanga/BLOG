@@ -14,6 +14,5 @@ export class NavTopComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.currentPageName);
   }
 }

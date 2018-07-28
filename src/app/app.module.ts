@@ -10,9 +10,12 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 
 import {NavTopComponent} from './share/nav-top/navTop.component';
+import {Panel1Component} from './share/panel1/panel1.component';
+
 import {LoginComponent} from './login/login.component';
 import {IndexComponent} from './index/index.component';
 import {MyLogComponent} from './myLog/myLog.component';
+import {MyPhotoComponent} from './myPhoto/myPhoto.component';
 
 import {RouterModule} from '@angular/router';
 
@@ -23,10 +26,13 @@ registerLocaleData(zh);
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     NavTopComponent,
+    Panel1Component,
+
+    LoginComponent,
     IndexComponent,
-    MyLogComponent
+    MyLogComponent,
+    MyPhotoComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,7 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     NgZorroAntdModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
