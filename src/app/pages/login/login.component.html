@@ -1,1 +1,17 @@
-<h1>login</h1>
+<div class="login">
+  <div class="login_container">
+    <form (ngSubmit)="dataForm.form.valid && login()" #dataForm="ngForm">
+      <div nz-row>
+        <label for="username">用户名：</label>
+        <input nz-input type="text" [(ngModel)]="user.username" name="username" id="username" required>
+      </div>
+      <div nz-row>
+        <label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+        <input nz-input type="password" [(ngModel)]="user.password" name="password" id="password" required>
+      </div>
+      <div nz-row>
+        <button nz-button type="submit" [disabled]="!dataForm.form.valid">登录</button>
+      </div>
+    </form>
+  </div>
+</div>
