@@ -15,13 +15,42 @@ li {
 
 .content {
   margin: 0 auto;
-  width: 1200px;
+  width: 1300px;
   padding-top: 85px;
 }
 
-.content_left{}
+.content_left{
+  padding-right: 30px;
+}
 
 .content_right{}
+
+.content_right_content{
+  padding: 10px;
+  background-color: #fefefe;
+  margin-bottom: 20px;
+}
+
+.content_right_content > button {
+  margin: 0 auto;
+  display: block;
+}
+
+.content_right_content img:hover{
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.content_right_content p{
+  margin: 20px 0 0 0;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  font-size: 16px;
+}
 
 .panel{
   width: 100%;
