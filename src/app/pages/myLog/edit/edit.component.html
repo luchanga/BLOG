@@ -1,0 +1,28 @@
+<!--导航-->
+<share-navTop [currentPageName]="'myLog'"></share-navTop>
+
+<div class="content">
+  <div class="edit-container">
+    <div class="edit-title">
+      <input type="text" placeholder="请在这里输入日志标题">
+    </div>
+    <div class="edit-content">
+      <textarea name="" id="" cols="30" rows="25"></textarea>
+    </div>
+    <div class="edit-footer">
+      <div class="edit-footer-content">
+        <label for="logType">日志分类：</label>
+        <select name="logType" id="logType">
+          <option value="0">请选择</option>
+          <option value="个人日志">个人日志</option>
+          <option value="情感天下">情感天下</option>
+          <option value="天下杂侃">天下杂侃</option>
+        </select>
+        <div nz-row>
+          <button nz-button>发表</button>
+          <button nz-button [routerLink]="['/myLog']">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

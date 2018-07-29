@@ -12,10 +12,12 @@ import zh from '@angular/common/locales/zh';
 import {NavTopComponent} from './share/nav-top/navTop.component';
 import {Panel1Component} from './share/panel1/panel1.component';
 
-import {LoginComponent} from './login/login.component';
-import {IndexComponent} from './index/index.component';
-import {MyLogComponent} from './myLog/myLog.component';
-import {MyPhotoComponent} from './myPhoto/myPhoto.component';
+import {LoginComponent} from './pages/login/login.component';
+import {IndexComponent} from './pages/index/index.component';
+import {MyLogComponent} from './pages/myLog/myLog.component';
+import {MyLogEditComponent} from './pages/myLog/edit/edit.component';
+import {MyLogViewComponent} from './pages/myLog/view/view.component';
+import {MyPhotoComponent} from './pages/myPhoto/myPhoto.component';
 
 import {RouterModule} from '@angular/router';
 
@@ -31,7 +33,11 @@ registerLocaleData(zh);
 
     LoginComponent,
     IndexComponent,
+    // 我的日志
     MyLogComponent,
+    MyLogViewComponent,
+    MyLogEditComponent,
+
     MyPhotoComponent,
   ],
   imports: [

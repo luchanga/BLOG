@@ -1,0 +1,21 @@
+.view{
+  height: 900px;
+  background-color: #F2EFE0;
+  padding: 50px;
+  .view-top{
+    border-bottom: 1px dashed #000;
+    height: 100px;
+    h1{
+      text-align: center;
+    }
+    p{
+      text-align: right;
+      margin-right: 90px;
+      color: #d1d1d1;
+    }
+  }
+  .view-bottom{
+    padding-top: 20px;
+    text-indent: 2em;
+  }
+}

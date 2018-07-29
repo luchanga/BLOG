@@ -1,0 +1,41 @@
+.edit-container{
+  height: 900px;
+  background-color: #F2EFE0;
+  padding: 50px;
+  .edit-title{
+    height: 100px;
+    border-bottom: 1px dashed #000000;
+    input{
+      width: 80%;
+      height: 50px;
+      border: 1px dashed #000000;
+      background-color: transparent;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+  .edit-content{
+    width: 100%;
+    padding-top: 20px;
+    textarea{
+      width: 100%;
+      border: 0;
+      background-color: transparent;
+    }
+  }
+  .edit-footer{
+    .edit-footer-content{
+      height: 100px;
+      background-color: #F2F1F2;
+      padding: 20px;
+    }
+    > div {
+      border: 1px solid #000;
+      > div{
+        margin-top: 10px;
+      }
+    }
+  }
+}
