@@ -1,3 +1,13 @@
+<div style="position: absolute; right: 55px; top: 100px;" *ngIf="comfirmShow">
+  <nz-alert
+    nzType="error"
+    nzMessage="Error"
+    nzDescription="用户名或密码错误！"
+    nzCloseable
+    (nzOnClose)="afterClose()"
+    nzShowIcon>
+  </nz-alert>
+</div>
 <div class="login">
   <div class="login_container">
     <form (ngSubmit)="dataForm.form.valid && login()" #dataForm="ngForm">
@@ -14,7 +24,7 @@
           <input nz-input type="password"  placeholder="密码" [(ngModel)]="user.password" name="password" id="password" required>
         </div>
         <div nz-row>
-          <button [nzType]="'primary'" nz-button type="submit" [disabled]="!dataForm.form.valid">登录</button>
+          <button [nzType]="'primary'" nz-button type="submit" (click)="login()" [disabled]="!dataForm.form.valid">登录</button>
         </div>
       </div>
     </form>

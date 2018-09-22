@@ -17,6 +17,7 @@ li {
   margin: 0 auto;
   width: 1300px;
   padding-top: 85px;
+  overflow: hidden;
 }
 
 .content_left{
@@ -44,12 +45,13 @@ li {
 .content_right_content p{
   margin: 20px 0 0 0;
   line-height: 22px;
-  overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   font-size: 16px;
+  height: 84px;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 
 .panel{

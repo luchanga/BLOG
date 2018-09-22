@@ -22,6 +22,10 @@ import {MyPhotoComponent} from './pages/myPhoto/myPhoto.component';
 import {RouterModule} from '@angular/router';
 
 import {appRoutes} from './app.routes';
+import {LoginService} from './sevices/login.service';
+import {AuthGuard} from './sevices/auth.service';
+import {MyLogService} from './sevices/myLog.service';
+// import {LuErrorAlertComponent} from './share/lu-error-alert/luErrorAlert.component';
 
 registerLocaleData(zh);
 
@@ -30,6 +34,7 @@ registerLocaleData(zh);
     AppComponent,
     NavTopComponent,
     Panel1Component,
+    // LuErrorAlertComponent,
 
     LoginComponent,
     IndexComponent,
@@ -48,7 +53,12 @@ registerLocaleData(zh);
     NgZorroAntdModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
+    LoginService,
+    MyLogService,
+    AuthGuard
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

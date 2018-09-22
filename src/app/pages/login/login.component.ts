@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {LoginService} from '../../sevices/login.service';
+import {User} from '../../models';
+import userModel from '../../models/userLogin.model';
 
 @Component({
   selector: 'login',
@@ -9,10 +12,12 @@ import {Router} from '@angular/router';
 
 export class LoginComponent implements OnInit {
 
-  user = {username: '', password: ''};
+  user: User = new User();
+  comfirmShow = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private loginService: LoginService
   ) {
   }
 
@@ -21,7 +26,24 @@ export class LoginComponent implements OnInit {
 
   // 登录
   login() {
-    console.log('登录');
-    this.router.navigateByUrl('/index');
+    this.loginService.login(this.user)
+      .subscribe(
+        (resp) => {
+          if (resp.body != null) {
+            localStorage.setItem('token', resp.headers && resp.headers.get('authorization'));
+            localStorage.setItem('currentUser', JSON.stringify(resp.body));
+            this.router.navigateByUrl('/index');
+            // userModel.isLogin = true;
+          } else {
+            this.comfirmShow = true;
+          }
+        }, (error) => {
+          this.comfirmShow = true;
+        }
+      );
+  }
+
+  afterClose() {
+    this.comfirmShow = false;
   }
 }

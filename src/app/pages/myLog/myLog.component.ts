@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {MyLogService} from '../../sevices/myLog.service';
+import {Blog} from '../../models';
 
 @Component({
   selector: 'myLog',
@@ -6,9 +8,24 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class MyLogComponent implements OnInit {
-  constructor() {
+
+  blogs: Blog[] = []; // 博客
+  constructor(
+    private myLogService: MyLogService
+  ) {
   }
 
   ngOnInit() {
+    this.getLogList();
+  }
+
+  // 获取博客列表
+  getLogList() {
+    this.myLogService.getLogList()
+      .subscribe(
+      (result) => {
+        this.blogs = result;
+      }
+    );
   }
 }
