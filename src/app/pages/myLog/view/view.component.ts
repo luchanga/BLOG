@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Blog} from '../../../models';
 
 @Component({
   selector: 'myLog-view',
@@ -7,9 +9,16 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class MyLogViewComponent implements OnInit {
-  constructor() {
+  constructor(
+    private activatedRoute: ActivatedRoute) {
   }
 
+  blog: Blog = new Blog();
+
   ngOnInit() {
+    // this.activatedRoute.params.subscribe((params) => {
+    //
+    // })
+    this.blog = JSON.parse(localStorage.getItem('blog'));
   }
 }

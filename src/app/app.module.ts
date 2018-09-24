@@ -11,6 +11,7 @@ import zh from '@angular/common/locales/zh';
 
 import {NavTopComponent} from './share/nav-top/navTop.component';
 import {Panel1Component} from './share/panel1/panel1.component';
+import {SearchComponent} from './share/search/search.component';
 
 import {LoginComponent} from './pages/login/login.component';
 import {IndexComponent} from './pages/index/index.component';
@@ -34,6 +35,7 @@ registerLocaleData(zh);
     AppComponent,
     NavTopComponent,
     Panel1Component,
+    SearchComponent,
     // LuErrorAlertComponent,
 
     LoginComponent,

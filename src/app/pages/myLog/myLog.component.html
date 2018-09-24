@@ -33,9 +33,9 @@
       <button nz-button [routerLink]="['/myLog/edit']">写日志</button>
     </div>
     <div *ngIf="blogs.length">
-      <div nz-row class="content_right_content" *ngFor="let item of blogs">
+      <div nz-row class="content_right_content" *ngFor="let item of blogs" (click)="viewDetail(item.id)">
         <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-          <h2><a href="javascript:;" [routerLink]="['/myLog/view']">{{item.title}}</a></h2>
+          <h2><a href="javascript:;">{{item.title}}</a></h2>
           <p>{{item.content}}</p>
         </div>
         <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">

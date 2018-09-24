@@ -8,80 +8,45 @@
         <div class="panel-top">
           <h2>关于我</h2>
         </div>
-        <div class="panel-bottom"></div>
+        <div class="panel-bottom">
+          <div *ngIf="blogger.username">
+            <p>姓名：{{blogger.username}}</p>
+          </div>
+          <div *ngIf="blogger.gender">
+            <p>性别：{{blogger.gender == '1' ? '男' : '女'}}</p>
+          </div>
+        </div>
       </div>
-    <div class="panel">
-      <div class="panel-top">
-        <h2>关于我</h2>
-      </div>
-      <div class="panel-bottom"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-top">
-        <h2>关于我</h2>
-      </div>
-      <div class="panel-bottom"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-top">
-        <h2>关于我</h2>
-      </div>
-      <div class="panel-bottom"></div>
-    </div>
+    <lu-search (search)="onSearchClick($event)"></lu-search>
+    <!--<div class="panel">-->
+      <!--<div class="panel-top">-->
+        <!--<h2>关于我</h2>-->
+      <!--</div>-->
+      <!--<div class="panel-bottom"></div>-->
+    <!--</div>-->
+    <!--<div class="panel">-->
+      <!--<div class="panel-top">-->
+        <!--<h2>关于我</h2>-->
+      <!--</div>-->
+      <!--<div class="panel-bottom"></div>-->
+    <!--</div>-->
+    <!--<div class="panel">-->
+      <!--<div class="panel-top">-->
+        <!--<h2>关于我</h2>-->
+      <!--</div>-->
+      <!--<div class="panel-bottom"></div>-->
+    <!--</div>-->
   </div>
   <div nz-col [nzXs]="16" [nzSm]="16" [nzMd]="16" class="content_right">
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;" [routerLink]="['/myLog/view']">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
-      </div>
-    </div>
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
-      </div>
-    </div>
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
-      </div>
-    </div>
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
-      </div>
-    </div>
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
-      </div>
-    </div>
-    <div nz-row class="content_right_content">
-      <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
-        <h2><a href="javascript:;">你是什么人便会遇上什么人</a></h2>
-        <p>有时就为了说一句狠话，像心头一口毒钉，永远麻痹这亲密感交流。恶言，真要慎出，平日多诚心爱语乃最简易之布施</p>
-      </div>
-      <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
-        <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
+    <div *ngIf="blogs.length">
+      <div nz-row class="content_right_content" *ngFor="let item of blogs" (click)="viewDetail(item.id)">
+        <div nz-col [nzXs]="17" [nzSm]="17" [nzMd]="17">
+          <h2><a href="javascript:;">{{item.title}}</a></h2>
+          <p>{{item.content}}</p>
+        </div>
+        <div nz-col [nzOffset]="1" [nzXs]="6" [nzSm]="6" [nzMd]="6" style="overflow: hidden">
+          <img src="../../../assets/images/1.jpg" alt="图片飞了" style="width: 100%;">
+        </div>
       </div>
     </div>
   </div>
